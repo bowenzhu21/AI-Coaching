@@ -6,28 +6,64 @@ const Fitness = () => {
   return (
     <div className="fitness-container">
       <h1 className="page-title">Fitness</h1>
+
       <section className="section">
-        <h2 className="section-title">Workout Routines</h2>
-        <div className="routine-card">
-          <h3 className="routine-title">Strength Training</h3>
-          <p className="routine-description">
-            A 5-day split focusing on compound lifts like squats, deadlifts, and bench press to build strength and muscle.
-          </p>
+        <h2 className="section-title">My Push / Pull / Legs Split</h2>
+        <div className="carousel">
+          {/* Push */}
+          <div className="routine-card wide-card image-card">
+            <div className="card-background" style={{ backgroundImage: `url('/images/push.webp')` }}></div>
+            <div className="card-content">
+              <h3 className="routine-title">Push (90 mins)</h3>
+              <ul className="exercise-list">
+                <li>Treadmill (5 mins)</li><hr />
+                <li>Flat Dumbell Press (8 x 4)</li><hr />
+                <li>Shoulder Press (8 x 4)</li><hr />
+                <li>Lateral Raises (8 x 4)</li><hr />
+                <li>Overhead Tricep Extensions (8 x 4)</li><hr />
+                <li>V Bar Pushdown (8 x 4)</li><hr />
+                <li>Chest Fly (8 x 4)</li><hr />
+                <li>Treadmill (5 mins)</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Pull */}
+          <div className="routine-card wide-card image-card">
+            <div className="card-background" style={{ backgroundImage: `url('/images/pull.webp')` }}></div>
+            <div className="card-content">
+              <h3 className="routine-title">Pull (75 mins)</h3>
+              <ul className="exercise-list">
+                <li>Treadmill (5 mins)</li><hr />
+                <li>Lat Pulldown (8 x 4)</li><hr />
+                <li>Cable Rows (8 x 4)</li><hr />
+                <li>Assisted Lateral Raises (8 x 4)</li><hr />
+                <li>Face Pulls (8 x 4)</li><hr />
+                <li>Cable Bicep Curls (8 x 4)</li><hr />
+                <li>Hammer Curls (8 x 4)</li><hr />
+                <li>Treadmill (5 mins)</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Legs */}
+          <div className="routine-card wide-card image-card">
+            <div className="card-background" style={{ backgroundImage: `url('/images/leg.webp')` }}></div>
+            <div className="card-content">
+              <h3 className="routine-title">Leg (90 mins)</h3>
+              <ul className="exercise-list">
+                <li>Stair Master(5 mins)</li><hr />
+                <li>Squats Maxed Weight (4 x 3)</li><hr />
+                <li>Squats Regular Weight (8 x 3)</li><hr />
+                <li>Hip Thrusts (8 x 4)</li><hr />
+                <li>Hamstring Excersize of Choice (8 x 4)</li><hr />
+                <li>Seated Calf Raises (8 x 4)</li><hr />
+                <li>Hyperextensions (8 x 4)</li><hr />
+                <li>Stair Master(10 mins)</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div className="routine-card">
-          <h3 className="routine-title">HIIT Cardio</h3>
-          <p className="routine-description">
-            High-intensity interval training sessions to boost endurance and burn fat in 20-30 minutes.
-          </p>
-        </div>
-      </section>
-      <section className="section">
-        <h2 className="section-title">Fitness Tips</h2>
-        <ul className="tips-list">
-          <li>Consistency is key: Aim for 3-5 workouts per week.</li>
-          <li>Prioritize recovery: Sleep 7-8 hours and stretch daily.</li>
-          <li>Track progress: Use apps or a journal to monitor gains.</li>
-        </ul>
       </section>
       <AppointmentForm service="Fitness Coaching" />
     </div>
