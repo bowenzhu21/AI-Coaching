@@ -1,0 +1,51 @@
+.appointment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #444;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #d3e8ff;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+  }
+  
+  .form-group select {
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="%230d47a1" d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center;
+    background-size: 12px;
+  }
+  
+  .submit-button {
+    padding: 12px 24px;
+    background-color: #0d47a1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #1565c0;
+  }
