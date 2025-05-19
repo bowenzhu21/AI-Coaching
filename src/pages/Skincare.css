@@ -58,10 +58,27 @@
     line-height: 2;
   }
   
-  .products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  .products-carousel {
+    display: flex;
+    overflow-x: auto;
     gap: 20px;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #0d47a1 #f5faff;
+  }
+  
+  .products-carousel::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .products-carousel::-webkit-scrollbar-track {
+    background: #f5faff;
+    border-radius: 4px;
+  }
+  
+  .products-carousel::-webkit-scrollbar-thumb {
+    background: #0d47a1;
+    border-radius: 4px;
   }
   
   .product-card {
@@ -71,6 +88,7 @@
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease;
+    flex: 0 0 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,7 +109,7 @@
   }
   
   .product-title {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     color: #0d47a1;
     margin-bottom: 8px;

@@ -7,6 +7,7 @@ import Fitness from './pages/Fitness';
 import Nutrition from './pages/Nutrition';
 import Skincare from './pages/Skincare';
 import Contact from './pages/Contact';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/skincare" element={<Skincare />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

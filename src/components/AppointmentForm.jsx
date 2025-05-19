@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './AppointmentForm.css';
 
-const AppointmentForm = ({ service }) => {
+const AppointmentForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     date: '',
     time: '',
-    service: service || 'Consultation',
+    message: ''
   });
 
   const handleChange = (e) => {
@@ -16,78 +16,74 @@ const AppointmentForm = ({ service }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Placeholder for calendar integration (e.g., send to Firebase or Calendly API)
-    console.log('Appointment booked:', formData);
-    // You can integrate with a service like Calendly or Google Calendar API here
-    setFormData({ name: '', email: '', date: '', time: '', service: service || 'Consultation' });
+    // Placeholder for form submission logic
+    console.log('Form submitted:', formData);
+    alert('Appointment request submitted!'); // Temporary feedback
   };
 
   return (
-    <section className="section">
-      <h2 className="section-title">Book an Appointment</h2>
-      <form className="appointment-form" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="date">Preferred Date</label>
-          <input
-            type="date"
-            id="date"
-            name="date"
-            value={formData.date}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="time">Preferred Time</label>
-          <input
-            type="time"
-            id="time"
-            name="time"
-            value={formData.time}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="service">Service</label>
-          <select
-            id="service"
-            name="service"
-            value={formData.service}
-            onChange={handleChange}
-            required
-          >
-            <option value="Consultation">Consultation</option>
-            <option value="Fitness Coaching">Fitness Coaching</option>
-            <option value="Nutrition Planning">Nutrition Planning</option>
-            <option value="Skincare Consultation">Skincare Consultation</option>
-          </select>
-        </div>
-        <button type="submit" className="submit-button">Book Now</button>
-      </form>
-    </section>
+    <div className="appointment-container">
+      <div className="appointment-card">
+        <h2>Book an Appointment</h2>
+        <form className="appointment-form" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="date">Preferred Date</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              value={formData.date}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="time">Preferred Time</label>
+            <input
+              type="time"
+              id="time"
+              name="time"
+              value={formData.time}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              rows="4"
+            ></textarea>
+          </div>
+          <button type="submit" className="appointment-button">Submit</button>
+        </form>
+      </div>
+    </div>
   );
 };
 
