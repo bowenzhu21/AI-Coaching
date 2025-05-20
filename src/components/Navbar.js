@@ -17,7 +17,7 @@ function Navbar() {
       </button>
       {isOpen && (
         <ul className="dropdown-menu">
-          <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
+          <li><Link to="/bowen" onClick={() => setIsOpen(false)}>Home</Link></li>
           <li><Link to="/engineering" onClick={() => setIsOpen(false)}>Engineering</Link></li>
           <li><Link to="/fitness" onClick={() => setIsOpen(false)}>Fitness</Link></li>
           <li><Link to="/nutrition" onClick={() => setIsOpen(false)}>Nutrition</Link></li>
