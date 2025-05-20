@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Bowen/static/css/main.5ce92298.css",
-    "main.js": "/Bowen/static/js/main.acd127fb.js",
-    "static/js/453.d0189c11.chunk.js": "/Bowen/static/js/453.d0189c11.chunk.js",
-    "static/media/home.png": "/Bowen/static/media/home.e6bd9b18864aa1417a66.png",
-    "index.html": "/Bowen/index.html",
-    "main.5ce92298.css.map": "/Bowen/static/css/main.5ce92298.css.map",
-    "main.acd127fb.js.map": "/Bowen/static/js/main.acd127fb.js.map",
-    "453.d0189c11.chunk.js.map": "/Bowen/static/js/453.d0189c11.chunk.js.map"
+    "main.css": "/bowen/static/css/main.95f33d20.css",
+    "main.js": "/bowen/static/js/main.721d5c01.js",
+    "static/js/453.2281342b.chunk.js": "/bowen/static/js/453.2281342b.chunk.js",
+    "static/media/home.png": "/bowen/static/media/home.e6bd9b18864aa1417a66.png",
+    "index.html": "/bowen/index.html",
+    "main.95f33d20.css.map": "/bowen/static/css/main.95f33d20.css.map",
+    "main.721d5c01.js.map": "/bowen/static/js/main.721d5c01.js.map",
+    "453.2281342b.chunk.js.map": "/bowen/static/js/453.2281342b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ce92298.css",
-    "static/js/main.acd127fb.js"
+    "static/css/main.95f33d20.css",
+    "static/js/main.721d5c01.js"
   ]
 }
