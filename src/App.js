@@ -11,16 +11,16 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/bowen">
       <Navbar />
       <div style={{ padding: '20px' }}>
         <Routes>
-          <Route path="/bowen" element={<Home />} />
-          <Route path="/bowen/engineering" element={<Engineering />} />
-          <Route path="/bowen/fitness" element={<Fitness />} />
-          <Route path="/bowen/nutrition" element={<Nutrition />} />
-          <Route path="/bowen/skincare" element={<Skincare />} />
-          <Route path="/bowen/contact" element={<Contact />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/engineering" element={<Engineering />} />
+          <Route path="/fitness" element={<Fitness />} />
+          <Route path="/nutrition" element={<Nutrition />} />
+          <Route path="/skincare" element={<Skincare />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>
