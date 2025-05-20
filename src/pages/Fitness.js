@@ -12,7 +12,7 @@ const Fitness = () => {
         <div className="carousel">
           {/* Push */}
           <div className="routine-card wide-card image-card">
-            <div className="card-background" style={{ backgroundImage: `url('/images/push.webp')` }}></div>
+            <div className="card-background" style={{ backgroundImage: `url('/bowen/images/push.webp')` }}></div>
             <div className="card-content">
               <h3 className="routine-title">Push (90 mins)</h3>
               <ul className="exercise-list">
@@ -30,7 +30,7 @@ const Fitness = () => {
 
           {/* Pull */}
           <div className="routine-card wide-card image-card">
-            <div className="card-background" style={{ backgroundImage: `url('/images/pull.webp')` }}></div>
+            <div className="card-background" style={{ backgroundImage: `url('/bowen/images/pull.webp')` }}></div>
             <div className="card-content">
               <h3 className="routine-title">Pull (75 mins)</h3>
               <ul className="exercise-list">
@@ -48,7 +48,7 @@ const Fitness = () => {
 
           {/* Legs */}
           <div className="routine-card wide-card image-card">
-            <div className="card-background" style={{ backgroundImage: `url('/images/leg.webp')` }}></div>
+            <div className="card-background" style={{ backgroundImage: `url('/bowen/images/leg.webp')` }}></div>
             <div className="card-content">
               <h3 className="routine-title">Leg (90 mins)</h3>
               <ul className="exercise-list">

@@ -4,27 +4,27 @@ import AppointmentForm from '../components/AppointmentForm';
 const nutritionData = [
   {
     title: 'Fat Loss',
-    image: '/images/fat.webp',
+    image: '/bowen/images/fat.webp',
     foods: ['Chia Seeds', 'Kiwis', 'Chicken Breast', 'Water!'],
   },
   {
     title: 'Gut Health',
-    image: '/images/ginger.jpg',
+    image: '/bowen/images/ginger.jpg',
     foods: ['Ginger', 'Greek Yogurt', 'Bananas', 'Broccoli'],
   },
   {
     title: 'Anti-Inflammation',
-    image: '/images/anti.jpg',
+    image: '/bowen/images/anti.jpg',
     foods: ['Berries', 'Almonds', 'Chia Seeds', 'Dark Chocolate'],
   },
   {
     title: 'For the Gym',
-    image: '/images/gym.jpg',
+    image: '/bowen/images/gym.jpg',
     foods: ['Chicken Breast', 'Eggs', 'Rice', 'Greek Yogurt'],
   },
   {
     title: 'My Favourites',
-    image: '/images/fav.jpg',
+    image: '/bowen/images/fav.jpg',
     foods: ['Eggs', 'Kiwis', 'Chia Seeds', 'Chicken Breast'],
   },
 ];
