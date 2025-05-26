@@ -5,14 +5,30 @@ const Engineering = () => {
   return (
     <div className="engineering-container">
       <h1 className="page-title">Engineering Portfolio</h1>
+
       {/* Projects Section */}
       <section className="section">
         <h2 className="section-title">Projects</h2>
 
         <div className="project-card">
+          <h3 className="project-title">SmartMixer</h3>
+          <p className="project-description">
+            AI-powered DJ system using Python, Librosa, and STFT to analyze tempo and beats, blending 100+ tracks with seamless transitions across 30 BPM ranges.
+          </p>
+          <a 
+            href="https://github.com/bowenzhu21/Smart-Mixer.git" 
+            className="project-link" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            View on GitHub →
+          </a>
+        </div>
+
+        <div className="project-card">
           <h3 className="project-title">Steady</h3>
           <p className="project-description">
-            TremorTracker: Advanced Tremor Monitoring & Insights
+            Wearable gloves with actuators and sensors to reduce tremors, achieving 84% reduction and 95% detection accuracy, powered by a TensorFlow-based AI model.
           </p>
           <a 
             href="https://github.com/bowenzhu21/Steady.git" 
@@ -25,12 +41,27 @@ const Engineering = () => {
         </div>
 
         <div className="project-card">
-          <h3 className="project-title">TYSI Conference</h3>
+          <h3 className="project-title">GymBro</h3>
           <p className="project-description">
-            $500k non-profit organization designed to provide high school students exposure into the professional STEM fields
+            Full-stack fitness matchmaking app built with React and Firebase, featuring a clustering-based matching algorithm and CI/CD pipeline via GitHub Actions.
           </p>
           <a 
-            href="https://tysiconference.webflow.io/?fbclid=PAZXh0bgNhZW0CMTEAAac6ZM9fc4Rtpdfbb836oa-FkWfWF2vOe5hkWeQxMji7St0oVLu6NuMRBVE3dQ_aem_uDRbw7JTinNPeA3olzHMKQ" 
+            href="https://github.com/bowenzhu21/GymBro.git" 
+            className="project-link" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            View on GitHub →
+          </a>
+        </div>
+
+        <div className="project-card">
+          <h3 className="project-title">TYSI Conference</h3>
+          <p className="project-description">
+            $500k non-profit initiative that connected 3,000+ students to industry leaders, including founders of Ethereum and Figma.
+          </p>
+          <a 
+            href="https://tysiconference.webflow.io" 
             className="project-link" 
             target="_blank" 
             rel="noopener noreferrer"
@@ -39,16 +70,18 @@ const Engineering = () => {
           </a>
         </div>
       </section>
+
       {/* Skills Section */}
       <section className="section">
         <h2 className="section-title">Skills</h2>
         <ul className="skills-list">
           <li><strong>Programming:</strong> C++, PHP, Java, JavaScript, Python, React, TypeScript, Node.js, HTML, CSS, GraphQL, Git, Docker</li>
-          <li><strong>Databases & Cloud:</strong> MySQL, Apache, Linux, MAMP, Ngrok, AWS, Azure</li>
-          <li><strong>Design & Tools:</strong> Drupal, WordPress, CiviCRM, Firebase, Cypress, Postman, Figma, Adobe XD, InVision, JIRA, Clickup</li>
+          <li><strong>Databases & Cloud:</strong> MySQL, Apache, Linux, MAMP, AWS, Azure, TensorFlow, PostgreSQL, MongoDB, Redis, REST</li>
+          <li><strong>Design & Tools:</strong> Drupal, WordPress, CiviCRM, Firebase, Cypress, Postman, Figma, Adobe XD, InVision</li>
           <li><strong>Engineering:</strong> Microfluidics, SOLIDWORKS, AutoCAD, COMSOL, Arduino, OCT Imaging, LabVIEW, MATLAB</li>
         </ul>
       </section>
+
 
       {/* Experience Section */}
       <section className="section">
@@ -57,40 +90,71 @@ const Engineering = () => {
         <div className="experience-item">
           <h3 className="experience-role">Software Developer – Joseph Murray & Associates Consulting Ltd</h3>
           <p className="experience-time">Jan. 2025 – Apr. 2025</p>
-          <p className="experience-description">
-          <li>Developed Merge Memberships and Delete CMS User extensions using LAMP Stack, WordPress CMS, and CiviCRM to streamline member management for 100K+ users the Python Software Foundation (PSF).</li>
-            <li>Built Cypress (JavaScript) tests for multi-step form submissions with backend API validation, and integrated visual regression tests into CI pipelines for ACORN, PSF, and SACE, improving code-break detection speed by 97%.</li>
-            <li>UI designed and developed the marketing strategy for CiviPress, a new company franchise that accounted for 20% of company revenue within its first quarter.</li>
-            <li>Built full stack Custom Entities using Drupal CMS and LAMP Stack, and developed PHP content migration scripts to handle 100k+ lines complex decision logic, taxonomies, and content translations for the Bigger Minds Flutter app.</li>
-          </p>
+          <ul>
+            <li>Streamlined membership management for 100K+ users by building WordPress + CiviCRM extensions.</li>
+            <li>Automated form testing using Cypress and integrated CI with visual regression, improving release safety by 97%.</li>
+            <li>Led UI and marketing strategy for CiviPress, contributing to 20% of company revenue in Q1.</li>
+            <li>Developed Drupal CMS entities and PHP scripts for 100K+ line content migration in the Bigger Minds app.</li>
+            <li>Scraped and analyzed federal/provincial election data with Python to power live dashboards and outreach.</li>
+          </ul>
         </div>
 
         <div className="experience-item">
           <h3 className="experience-role">Software Developer – North P&D Inc.</h3>
           <p className="experience-time">Jan. 2024 – Jun. 2024</p>
-          <p className="experience-description">
-          <li>Built the GymBro app using React, Firebase Auth, and Firestore, enabling real-time data syncing and user auth.</li>
-            <li>Engineered a custom matching algorithm using Firestore compound queries and user clustering, improving match relevance by 75% according to pilot user feedback.</li>
-            <li>Designed and implemented 20+ modular, reusable UI components with React hooks, significantly improving development efficiency and ensuring a consistent, polished user experience.</li>
-          </p>
+          <ul>
+            <li>Developed an onboarding portal for Chick-fil-A using React, Node.js, and Firebase, serving 5,000+ new hires.</li>
+            <li>Built scalable backend services with AWS and MongoDB, reducing data latency by 30%.</li>
+            <li>Delivered a real-time dashboard with React + AWS CloudWatch to improve system visibility and efficiency by 15%.</li>
+          </ul>
         </div>
 
         <div className="experience-item">
-          <h3 className="experience-role">Biomedical / Mechanical Engineer – Hybrid Biomedical Optics Labs</h3>
-          <p className="experience-time">May 2022 – Aug. 2023</p>
-          <p className="experience-description">
-          <li>Conducted OCT and OKR experiments on Zebrafish lens models, designed components using SOLIDWORKS, used Python machine learning to analyze cataractous development across 3 stages with 94% accuracy.</li>
-          <li>Engineered a custom microfluidics system and optimized pressure–flow dynamics using COMSOL Multiphysics and LabVIEW, improving data throughput by 15% with efficient sensor interfacing and signal processing.</li>
-          </p>
+          <h3 className="experience-role">Biomedical Research Intern – Hybrid Biomedical Optics Labs</h3>
+          <p className="experience-time">May 2022 – Dec. 2022</p>
+          <ul>
+            <li>Conducted OCT/OKR experiments on Zebrafish lenses and designed imaging components using SOLIDWORKS.</li>
+            <li>Trained a Python ML model with OpenCV to detect cataract stages and cancerous development with 94% accuracy.</li>
+            <li>Preprocessed 10,000+ microscopy images using NumPy and scikit-image to improve model input quality.</li>
+          </ul>
         </div>
 
         <div className="experience-item">
-          <h3 className="experience-role">Head of Marketing / UI/UX Designer – Handifuel (Startup)</h3>
-          <p className="experience-time">Jul. 2023 – Aug. 2023</p>
-          <p className="experience-description">
-          <li>Worked with influencers to boost social media disability awareness, reaching 100k users via SEO and campaign.</li>
-          <li>Created campaign visuals using Figma and Adobe XD, leveraging data analytics to guide financing and incubation.</li>
-          </p>
+          <h3 className="experience-role">Systems Engineer – Hybrid Biomedical Optics Labs</h3>
+          <p className="experience-time">Jan. 2023 – Aug. 2023</p>
+          <ul>
+            <li>Designed a microfluidics system with integrated sensors, using COMSOL and LabVIEW to boost throughput by 30%.</li>
+            <li>Coded experiments in UProcess to analyze pressure–flow relationships and calibrate system parameters.</li>
+            <li>Automated fluid handling with Python visualizations and Arduino PID control, improving test repeatability.</li>
+          </ul>
+        </div>
+
+        <div className="experience-item">
+          <h3 className="experience-role">UI/UX Designer & Marketing Lead – Handifuel (Startup)</h3>
+          <p className="experience-time">Jun. 2023 – Sep. 2023</p>
+          <ul>
+            <li>Led outreach campaigns that reached 100K+ users and raised awareness for disability-focused tech solutions.</li>
+            <li>Designed campaign visuals in Figma and Adobe XD, using analytics to support fundraising and incubation.</li>
+          </ul>
+        </div>
+
+        <div className="experience-item">
+          <h3 className="experience-role">Chairman – Toronto Youth STEM Innovation Org. ($500k NGO)</h3>
+          <p className="experience-time">Nov. 2022 – Jun. 2024</p>
+          <ul>
+            <li>Secured $200K in sponsorships and drew 3,000+ students and speakers including the founders of Ethereum & Figma.</li>
+            <li>Partnered with AWS to provide $25K in credits and mentorship from Stanford, UC Berkeley, and top tech leaders.</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section className="section">
+        <h2 className="section-title">Education</h2>
+        <div className="education-item">
+          <h3 className="education-school">University of Waterloo – BASc in Systems Design Engineering</h3>
+          <p className="education-time">Sep. 2024 – Apr. 2029</p>
+          <p className="education-details">Involvement: Academic Class Rep, Formula Electric (Aerospace), House Taylor (St. Jerome's)</p>
         </div>
       </section>
     </div>
