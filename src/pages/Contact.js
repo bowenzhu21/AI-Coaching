@@ -17,8 +17,20 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-container">
+    <div
+      className="contact-container"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(255,255,255,0.74), rgba(255,255,255,0.78)), url('/bowen/images/software_bg.webp')",
+      }}
+    >
       <h1 className="page-title">Contact Me</h1>
+      <div className="contact-hero" style={{ backgroundImage: "url('/bowen/images/software_bg.webp')" }}>
+        <div className="contact-hero-overlay">
+          <h2 className="contact-hero-title">Let’s connect</h2>
+          <p className="contact-hero-sub">Open to projects, collaborations, and coaching.</p>
+        </div>
+      </div>
       <section className="section">
         <h2 className="section-title">Get in Touch</h2>
         <form className="contact-form" onSubmit={handleSubmit}>
