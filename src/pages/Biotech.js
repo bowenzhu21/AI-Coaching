@@ -36,6 +36,21 @@ const Biotech = () => {
             View on GitHub →
           </a>
         </div>
+
+        <div className="project-card">
+          <h3 className="project-title">GymBro</h3>
+          <p className="project-description">
+            Full-stack fitness matchmaking app built with React and Firebase, featuring a clustering-based matching algorithm and CI/CD pipeline via GitHub Actions.
+          </p>
+          <a
+            href="https://bowenzhu21.github.io/GymBro/"
+            className="project-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open GymBro →
+          </a>
+        </div>
       </section>
 
       {/* Skills Section */}
