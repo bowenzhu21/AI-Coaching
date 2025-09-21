@@ -91,7 +91,15 @@
     flex-direction: column;
     gap: 10px;
   }
-  
+
+  .project-card--image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid rgba(211, 232, 255, 0.85);
+    box-shadow: 0 6px 16px rgba(13, 71, 161, 0.18);
+  }
+
   .project-card:hover {
     transform: translateY(-8px);
   }

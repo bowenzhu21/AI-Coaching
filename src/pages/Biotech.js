@@ -22,7 +22,13 @@ const Biotech = () => {
       <section className="section">
         <h2 className="section-title">Projects</h2>
 
-        <div className="project-card">
+        <div
+          className="project-card project-card--image"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(245,250,255,0.78), rgba(245,250,255,0.9)), url('/bowen/images/steady.png')",
+          }}
+        >
           <h3 className="project-title">Steady</h3>
           <p className="project-description">
             Wearable gloves with actuators and sensors to reduce tremors, achieving 84% reduction and 95% detection accuracy, powered by a TensorFlow-based AI model.
@@ -37,7 +43,13 @@ const Biotech = () => {
           </a>
         </div>
 
-        <div className="project-card">
+        <div
+          className="project-card project-card--image"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(245,250,255,0.78), rgba(245,250,255,0.9)), url('/bowen/images/gymbro.png')",
+          }}
+        >
           <h3 className="project-title">GymBro</h3>
           <p className="project-description">
             Full-stack fitness matchmaking app built with React and Firebase, featuring a clustering-based matching algorithm and CI/CD pipeline via GitHub Actions.
@@ -50,6 +62,14 @@ const Biotech = () => {
           >
             Open GymBro →
           </a>
+          <a
+            href="https://github.com/bowenzhu21/GymBro-Mobile"
+            className="project-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Mobile App on GitHub →
+          </a>
         </div>
       </section>
 
@@ -57,9 +77,9 @@ const Biotech = () => {
       <section className="section">
         <h2 className="section-title">Skills</h2>
         <ul className="skills-list">
-          <li><strong>Programming:</strong> Python, JavaScript, React, React Native, Node.js, C++, Java, Pandas, NumPy, SciPy, Flask, HTML, PHP</li>
-          <li><strong>ML & Cloud:</strong> TensorFlow, PyTorch, AWS (EC2), Docker, Linux, MySQL, Firebase, Apache, YAML</li>
-          <li><strong>Design & Tools:</strong> Git, Figma, Adobe XD, Tailwind CSS, Cypress, Matplotlib, ffmpeg</li>
+          <li><strong>Programming:</strong> Python, JavaScript, React, React Native, Node.js, C++, Java, Pandas, NumPy, SciPy, Flask, HTML, PHP, TypeScript, Next.js, FastAPI</li>
+          <li><strong>ML & Cloud:</strong> TensorFlow, PyTorch, AWS (EC2), Docker, Linux, MySQL, Firebase, Apache, YAML, OpenCV, PostgreSQL</li>
+          <li><strong>Design & Tools:</strong> Git, Figma, Adobe XD, Tailwind CSS, Cypress, Matplotlib, ffmpeg, Nginx/TLS</li>
           <li><strong>Hardware:</strong> Arduino, ESP32, IMU, BLE, Signal Processing, Twilio, SOLIDWORKS, ANSYS, LabVIEW, Microfluidics</li>
         </ul>
       </section>
@@ -69,19 +89,19 @@ const Biotech = () => {
         <h2 className="section-title">Experience</h2>
 
         <div className="experience-item">
-          <h3 className="experience-role">Biomechanical Engineer | Founding Engineer – Hippos Exoskeleton</h3>
+          <h3 className="experience-role">Software Engineer | Founding Engineer – Hippos Exoskeleton</h3>
           <p className="experience-time">Jul. 2025 – Present • San Francisco, CA</p>
           <ul>
-            <li>Developed smart knee braces with AI injury detection and real-time biomechanics, preventing ACL tears and improving recovery outcomes.</li>
-            <li>Built a React Native app and web dashboard from Figma designs, enabling live calibration, Bluetooth pairing, and account management.</li>
-            <li>Reduced latency to 200ms by engineering a pipeline connecting ESP32 devices, IMUs, and flexion sensors to a Python + WebSocket backend streaming 20+ datapoints/sec.</li>
-            <li>Created Python ML scripts (NumPy, SciPy, Pandas) to quantify injury metrics, validated by 50+ interviews.</li>
+            <li>Developing smart knee braces with real-time AI biometrics to prevent ACL tears and improve performance.</li>
+            <li>Built a secure 150ms ingest API by deploying a FastAPI + PostgreSQL backend with Docker and Nginx/TLS on a hardened VPS.</li>
+            <li>Delivered cross-platform dashboards informed by 100+ industry interviews, shipping the companion app in React Native.</li>
+            <li>Engineered a biomechanical ML pipeline streaming 20+ datapoints/sec from ESP32 IMU sensors via Python (NumPy, Pandas, SciPy) and BLE.</li>
           </ul>
         </div>
 
         <div className="experience-item">
           <h3 className="experience-role">Biomedical Research Intern – Hybrid Biomedical Optics Labs</h3>
-          <p className="experience-time">May 2022 – Dec. 2022</p>
+          <p className="experience-time">Jan. 2023 – Aug. 2023</p>
           <ul>
             <li>Conducted OCT/OKR experiments on Zebrafish lenses and designed imaging components using SOLIDWORKS.</li>
             <li>Trained a Python ML model with OpenCV to detect cataract stages and cancerous development with 94% accuracy.</li>
@@ -91,7 +111,7 @@ const Biotech = () => {
 
         <div className="experience-item">
           <h3 className="experience-role">Systems Engineer – Hybrid Biomedical Optics Labs</h3>
-          <p className="experience-time">Jan. 2023 – Aug. 2023</p>
+          <p className="experience-time">May 2022 – Dec. 2022</p>
           <ul>
             <li>Designed a microfluidics system with integrated sensors, using COMSOL and LabVIEW to boost throughput by 30%.</li>
             <li>Coded experiments in UProcess to analyze pressure–flow relationships and calibrate system parameters.</li>
