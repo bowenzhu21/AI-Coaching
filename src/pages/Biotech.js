@@ -21,7 +21,26 @@ const Biotech = () => {
       {/* Projects Section */}
       <section className="section">
         <h2 className="section-title">Projects</h2>
-
+<div
+          className="project-card project-card--image"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(245,250,255,0.78), rgba(245,250,255,0.9)), url('/bowen/images/gymbro.png')",
+          }}
+        >
+          <h3 className="project-title">GymBro</h3>
+          <p className="project-description">
+            Full-stack fitness matchmaking app built with React and Firebase, featuring a clustering-based matching algorithm and CI/CD pipeline via GitHub Actions.
+          </p>
+          <a
+            href="https://bowenzhu21.github.io/gymbro/"
+            className="project-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open GymBro →
+          </a>
+        </div>
         <div
           className="project-card project-card--image"
           style={{
@@ -40,27 +59,6 @@ const Biotech = () => {
             rel="noopener noreferrer"
           >
             View on GitHub →
-          </a>
-        </div>
-
-        <div
-          className="project-card project-card--image"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(245,250,255,0.78), rgba(245,250,255,0.9)), url('/bowen/images/gymbro.png')",
-          }}
-        >
-          <h3 className="project-title">GymBro</h3>
-          <p className="project-description">
-            Full-stack fitness matchmaking app built with React and Firebase, featuring a clustering-based matching algorithm and CI/CD pipeline via GitHub Actions.
-          </p>
-          <a
-            href="https://bowenzhu21.github.io/gymbro/"
-            className="project-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Open GymBro →
           </a>
         </div>
       </section>
