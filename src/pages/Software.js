@@ -55,20 +55,12 @@ const Software = () => {
             Full-stack fitness matchmaking app built with React and Firebase, featuring a clustering-based matching algorithm and CI/CD pipeline via GitHub Actions.
           </p>
           <a
-            href="https://bowenzhu21.github.io/GymBro/"
+            href="https://bowenzhu21.github.io/gymbro/"
             className="project-link"
             target="_blank"
             rel="noopener noreferrer"
           >
             Open GymBro →
-          </a>
-          <a
-            href="https://github.com/bowenzhu21/GymBro-Mobile"
-            className="project-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Mobile App on GitHub →
           </a>
         </div>
 
