@@ -5,7 +5,7 @@
   align-items: center;
   min-height: 80vh;
   width: 100%;
-  background-color: white;
+  background: var(--bg-gradient);
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
 }
@@ -21,8 +21,9 @@
   background-size: 120%;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.7; /* Opacity only on image */
+  opacity: 0.18;
   z-index: 0;
+  filter: saturate(1.2) contrast(1.05);
 }
 
 .home-content {
@@ -31,20 +32,89 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 16px;
+  animation: fadeSlideDown 1s ease forwards;
+  opacity: 0;
 }
 
 .home-title {
   font-size: 72px;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
-  color: black;
-  margin-bottom: 16px;
+  color: var(--text-primary);
+  margin-bottom: 0;
+  letter-spacing: 0.02em;
+  background: linear-gradient(120deg, #b86f57, #d89a7f, #f2c8a9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: titlePulse 6s ease-in-out infinite;
 }
 
 .home-subtitle {
   font-size: 20px;
   font-weight: 400;
   font-family: 'Poppins', sans-serif;
-  color: #333;
+  color: var(--text-muted);
   max-width: 100%;
+  text-align: center;
+  animation: subtitleFade 1.2s ease 0.2s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes titlePulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 12px 18px rgba(149, 118, 97, 0.18));
+  }
+  50% {
+    filter: drop-shadow(0 18px 26px rgba(149, 118, 97, 0.22));
+  }
+}
+
+@keyframes subtitleFade {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 48px;
+  }
+
+  .home-subtitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    min-height: 70vh;
+    padding: 0 16px;
+  }
+
+  .home-title {
+    font-size: 40px;
+  }
+
+  .home-subtitle {
+    font-size: 16px;
+    line-height: 1.6;
+  }
 }
