@@ -1,26 +1,32 @@
-# My Personal Portfolio
+# Portfolio (bowenzhu21.github.io/bowen)
 
-This is my personal portfolio website built with React. It showcases my engineering work alongside my interests in fitness, nutrition, and skincare.
+Personal site built with React and React Router to highlight my engineering work and interests. Deployed on GitHub Pages via the built-in `npm run deploy` workflow.
 
-## ✨ Sections
+## Pages & Content
+- **Home** – Landing page with quick navigation into showcase and wellness content.
+- **Showcase** – Hippos BLE firmware + full-stack demo video, LearnLog, GymBro, Steady, and SmartMixer project cards.
+- **Fitness** – Training plans, movement patterns, and visual references.
+- **Nutrition** – Goal-based nutrition guides and recommendations.
+- **Contact** – Contact form plus links to reach me directly.
 
-- **Engineering** – Projects, prototypes, and documentation
-- **Fitness** – Workout splits and training tips
-- **Nutrition** – Food guides for fat loss, gut health, and more
-- **Skincare** – My personal routine and product notes
+## Tech Stack
+- React 19 + React Router DOM 7
+- react-scripts 5 build system
+- CSS modules + custom styles in `src/pages/Engineering.css`, `Fitness.css`, and `Nutrition.css`
+- Hosted on GitHub Pages (route base `/bowen`)
 
-## 🛠️ Tech Stack
+## Local Development
+```bash
+npm install
+npm start
+```
+The app runs at `http://localhost:3000` with live reload.
 
-- React  
-- CSS Modules  
-- JavaScript  
+## Deployment
+```bash
+npm run deploy
+```
+`predeploy` triggers `npm run build`, then `gh-pages` publishes the `build/` folder to `https://bowenzhu21.github.io/bowen`.
 
-## 📌 Purpose
-
-This site represents who I am — as an engineer and as a person. It brings together my work and passions in one place.
-
-## 📬 Contact
-
-Reach out to me via the contact form on the site.
-
----
+## Contact
+Use the contact form on the site or connect via the links provided in the footer.
