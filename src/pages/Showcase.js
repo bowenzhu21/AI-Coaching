@@ -1,5 +1,8 @@
 import React, { useMemo, useState } from 'react';
 import './Engineering.css';
+import './Fitness.css';
+
+const quickTopics = ['AI Systems', 'Full-Stack Product', 'Embedded Firmware', 'Design Leadership'];
 
 const Showcase = () => {
   const projects = useMemo(
@@ -10,7 +13,7 @@ const Showcase = () => {
         description:
           'Daily learning journal that pairs AI reflections with actionable summaries. Built with Next.js 15, Relay, and Prisma.',
         background: 'linear-gradient(135deg, #f7e4d7 0%, #fdf3ea 100%)',
-        tags: ['Next.js', 'TypeScript', 'Relay', 'Prisma', 'AI'],
+        tags: ['TypeScript', 'PostgreSQL', 'LLMs', 'Next.js', 'Relay', 'Prisma'],
         live: 'https://learn-log.vercel.app/',
         code: 'https://github.com/bowenzhu21/LearnLog',
         highlights: [
@@ -25,7 +28,7 @@ const Showcase = () => {
         description:
           'Machine-learning powered workout matchmaking platform pairing accountability partners based on training styles.',
         background: 'linear-gradient(135deg, #f5e6d6 0%, #f8ede0 100%)',
-        tags: ['React', 'Firebase', 'Matching ML', 'CI/CD'],
+        tags: ['React Native', 'TypeScript', 'Node.js', 'Firebase', 'Firestore', 'Authentication', 'Storage', 'Expo'],
         live: 'https://bowenzhu21.github.io/gymbro/',
         code: 'https://github.com/bowenzhu21/gymbro',
         highlights: [
@@ -40,7 +43,7 @@ const Showcase = () => {
         description:
           'Wearable actuator glove system that reduces tremors by 84% with real-time sensor fusion and ML-based detection.',
         background: 'linear-gradient(135deg, #f0e1d8 0%, #f9f2eb 100%)',
-        tags: ['TensorFlow', 'Embedded', 'Signal Processing', 'Hardware'],
+       tags: ['TensorFlow', 'Embedded C++', 'Arduino', 'ESP32', 'Accelerometer', 'Python'],
         code: 'https://github.com/bowenzhu21/Steady.git',
         highlights: [
           'Streaming IMU data into a TensorFlow Lite model for 95% tremor classification accuracy.',
@@ -54,7 +57,7 @@ const Showcase = () => {
         description:
           'AI DJ assistant that layers tracks with BPM-aware transitions using Librosa signal analysis and STFT.',
         background: 'linear-gradient(135deg, #f2ddd5 0%, #f6eee6 100%)',
-        tags: ['Python', 'Librosa', 'DSP', 'Automation'],
+        tags: ['Python', 'Librosa', 'NumPy', 'Pandas', 'SciPy', 'Matplotlib', 'Machine Learning', 'Flask'],
         code: 'https://github.com/bowenzhu21/Smart-Mixer.git',
         highlights: [
           'Automated BPM drift correction and beat alignment across 30 BPM ranges.',
@@ -75,28 +78,28 @@ const Showcase = () => {
         background: 'linear-gradient(140deg, rgba(253,248,243,0.92), rgba(246,236,228,0.9))',
       }}
     >
-      <h1 className="page-title">Showcase</h1>
-      <div
-        className="eng-hero"
-        style={{
-          background:
-            'radial-gradient(circle at 15% 20%, rgba(245, 214, 197, 0.75) 0%, rgba(255,255,255,0.6) 50%), radial-gradient(circle at 85% 10%, rgba(241, 225, 210, 0.78) 0%, rgba(255,255,255,0.6) 55%), linear-gradient(135deg, #fdf8f3 0%, #f7eee6 60%)',
-        }}
-      >
-        <div className="eng-hero-overlay">
-          <h2 className="eng-hero-title">I think smart but I work smarter. Efficiency is everything.</h2>
-          <p className="eng-hero-sub">
-            Bridging AI engineering and product management to deliver scalable systems and high-quality products at
-            record speed.
-          </p>
-          <div className="hero-badges">
-            <span className="hero-badge">AI Systems</span>
-            <span className="hero-badge">Full-Stack Product</span>
-            <span className="hero-badge">Embedded Firmware</span>
-            <span className="hero-badge">Design Leadership</span>
-          </div>
+      <section className="fitness-hero">
+        <div className="fitness-hero__content">
+          <span className="eyebrow">Bowen Zhu • Projects</span>
+          <h1>Showcase</h1>
+          <p>Hi, I'm Bowen. Check out my projects below.</p>
+          <ul className="fitness-tags">
+            {quickTopics.map((topic) => (
+              <li key={topic}>{topic}</li>
+            ))}
+          </ul>
         </div>
-      </div>
+        <div className="fitness-hero__card">
+          <h2>Get in Touch</h2>
+          <p>Want to chat and learn more about me, or get a free software consultation?</p>
+          <button
+            className="hero-cta"
+            onClick={() => window.location.href = '/bowen/contact'}
+          >
+            Let's Chat
+          </button>
+        </div>
+      </section>
 
       <section className="section">
         <h2 className="section-title">Hippos Firmware + Full Stack App using BLE Integration Demo</h2>
@@ -108,11 +111,26 @@ const Showcase = () => {
               loop. Built as the end-to-end control center for high-performance athletes.
             </p>
             <div className="tag-row">
-              <span className="tag">FastAPI</span>
-              <span className="tag">React Native</span>
-              <span className="tag">BLE</span>
-              <span className="tag">ESP32-S3</span>
+              <span className="tag">TypeScript</span>
+              <span className="tag">Python</span>
               <span className="tag">PostgreSQL</span>
+              <span className="tag">JavaScript</span>
+              <span className="tag">React Native</span>
+              <span className="tag">System Architecture</span>
+              <span className="tag">Product Management</span>
+              <span className="tag">Pandas</span>
+              <span className="tag">SciPy</span>
+              <span className="tag">NumPy</span>
+              <span className="tag">UI/UX</span>
+              <span className="tag">Expo</span>
+              <span className="tag">Docker</span>
+              <span className="tag">AWS</span>
+              <span className="tag">EC2</span>
+              <span className="tag">C++</span>
+              <span className="tag">ESP32</span>
+              <span className="tag">BLE</span>
+              <span className="tag">Arduino IDE</span>
+              <span className="tag">IMU</span>
             </div>
           </div>
           <video className="project-video" controls>

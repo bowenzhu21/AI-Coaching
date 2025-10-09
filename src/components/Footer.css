@@ -1,10 +1,10 @@
 .footer {
-    background-color: #f8f9fa;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.96), rgba(250, 240, 231, 0.92));
     padding: 40px 20px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    color: #333;
-    border-top: 1px solid #e0e0e0;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(201, 123, 99, 0.18);
   }
   
   .footer-content {
@@ -29,24 +29,24 @@
   }
   
   .contact-list i {
-    color: #0d47a1;
+    color: var(--accent);
     margin-right: 8px;
     font-size: 18px;
   }
   
   .contact-list a, .contact-list span {
-    color: #333;
+    color: var(--text-muted);
     text-decoration: none;
     transition: color 0.2s ease;
   }
   
   .contact-list a:hover {
-    color: #0d47a1;
+    color: var(--accent);
   }
   
   .footer-copyright {
     font-size: 14px;
-    color: #666;
+    color: var(--text-subtle);
   }
   
   /* Responsive design */

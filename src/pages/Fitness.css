@@ -1,325 +1,190 @@
-.fitness-container {
-  padding: 60px 20px;
-  max-width: 1000px;
+.fitness-page {
+  max-width: 1080px;
   margin: 0 auto;
+  padding: 80px 24px 96px;
   font-family: 'Poppins', sans-serif;
-  color: #222;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-/* Background image set inline in Fitness.js */
-
-.page-title {
-  font-size: 48px;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 50px;
-  color: #0d47a1;
-}
-
-.section {
-  margin-bottom: 60px;
-}
-
-.section-title {
-  font-size: 32px;
-  font-weight: 600;
-  border-bottom: 2px solid #d3e8ff;
-  padding-bottom: 10px;
-  margin-bottom: 30px;
-}
-
-.carousel {
-  display: flex;
-  gap: 24px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  padding-bottom: 10px;
-}
-
-.carousel::-webkit-scrollbar {
-  height: 6px;
-}
-.carousel::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 10px;
-}
-
-.wide-card {
-  min-width: 400px;
-  flex-shrink: 0;
-  scroll-snap-align: start;
-  height: 100%;
-}
-
-.routine-card {
-  background-color: #f5faff;
-  padding: 24px;
-  border: 1px solid #d3e8ff;
-  border-radius: 12px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
   position: relative;
-  overflow: hidden;
 }
 
-.routine-card:hover {
-  transform: translateY(-8px);
-}
-
-.image-card .card-background {
+.fitness-page::before {
+  content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.3;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(250, 242, 234, 0.92));
+  border-radius: 28px;
+  border: 1px solid rgba(201, 123, 99, 0.09);
+  box-shadow: 0 32px 60px rgba(149, 118, 97, 0.16);
+  z-index: 0;
+}
+
+.fitness-page > * {
+  position: relative;
   z-index: 1;
 }
 
-.image-card .card-content {
-  position: relative;
-  z-index: 2;
-  color: #000000;
-}
-
-.routine-title {
-  font-size: 24px;
-  font-weight: 600;
-  color: #fff;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-  margin-bottom: 16px;
-}
-
-.exercise-list {
-  list-style: none;
-  padding: 0;
-  font-size: 16px;
-  line-height: 2;
-  margin: 0;
-}
-
-.exercise-list li {
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-
-.exercise-list hr {
-  border: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
-  margin: 4px 0;
-}
-
-.tips-list {
-  list-style: none;
-  padding: 0;
-  font-size: 16px;
-  line-height: 2;
-}
-
-/* Split selector */
-.split-selector {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
-
-.split-selector button {
-  background: #eef5ff;
-  border: 1px solid #cfe1ff;
-  padding: 8px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.split-selector button.active {
-  background: #0d47a1;
-  color: #fff;
-  border-color: #0d47a1;
-}
-
-.section-subtitle {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 8px 0 16px;
-  color: #0d47a1;
-}
-
-/* Cards and metrics */
-.metrics-grid {
+.fitness-hero {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
-}
-
-.card {
-  background: #f5faff;
-  border: 1px solid #d3e8ff;
-  border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.card-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: #0d47a1;
-  margin-bottom: 10px;
-}
-
-.input-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  margin: 8px 0;
-}
-.input-row label {
-  flex: 1;
-}
-.input-row input,
-.input-row select {
-  flex: 1;
-  padding: 8px 10px;
-  border: 1px solid #cfe1ff;
-  border-radius: 8px;
-  background: #fff;
-}
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin-top: 12px;
-}
-.stat {
-  background: #eef5ff;
-  border: 1px solid #cfe1ff;
-  border-radius: 8px;
-  padding: 10px;
-}
-.stat-label {
-  font-size: 12px;
-  color: #456;
-}
-.stat-value {
-  font-size: 16px;
-  font-weight: 600;
-}
-.muted { color: #556; font-weight: 400; font-size: 12px; }
-
-/* FAQ */
-.faq-item {
-  background: #f9fbff;
-  border: 1px solid #e3efff;
-  border-radius: 8px;
-  padding: 10px 12px;
-  margin-bottom: 10px;
-}
-.faq-item summary {
-  cursor: pointer;
-  font-weight: 600;
-}
-.faq-item p {
-  margin: 8px 0 0;
-}
-
-/* Hero */
-.hero {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  padding: clamp(40px, 6vw, 60px);
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(247, 228, 214, 0.9), rgba(253, 245, 238, 0.95));
+  border: 1px solid rgba(201, 123, 99, 0.18);
+  box-shadow: 0 28px 48px rgba(149, 118, 97, 0.18);
+  margin-bottom: 48px;
   position: relative;
-  height: 260px;
-  border-radius: 12px;
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 24px;
   overflow: hidden;
 }
-.hero-overlay {
+
+.fitness-hero::after {
+  content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.55));
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  text-align: center;
-  gap: 8px;
-}
-.hero-title { font-size: 28px; font-weight: 700; }
-.hero-subtitle { font-size: 16px; opacity: 0.95; }
-.cta {
-  background: #0d47a1;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 14px;
-  cursor: pointer;
-  font-weight: 600;
+  inset: -40% -20%;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.8), transparent 60%),
+    radial-gradient(circle at 80% 10%, rgba(255, 210, 188, 0.5), transparent 55%);
+  opacity: 0.85;
+  pointer-events: none;
 }
 
-/* Programs Overview */
-.programs-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-}
-.program-card {
-  background: #f5faff;
-  border: 1px solid #d3e8ff;
-  border-radius: 12px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform .2s ease, box-shadow .2s ease;
+.fitness-hero__content {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
+  gap: 18px;
+  color: var(--text-primary);
 }
-.program-card:hover { transform: translateY(-4px); box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
-.program-card.active { outline: 2px solid #0d47a1; }
-.program-card img { width: 100%; height: 120px; object-fit: cover; }
-.program-content { padding: 12px; }
-.program-content h3 { margin: 0 0 6px; font-size: 18px; color: #0d47a1; }
-.program-content p { margin: 0; font-size: 14px; color: #345; }
 
-/* Gallery */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.75rem;
+  color: var(--text-subtle);
+}
+
+.fitness-hero__content h1 {
+  font-size: clamp(2.1rem, 5vw, 3rem);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.fitness-hero__content p {
+  font-size: 1.05rem;
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.fitness-tags {
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
-}
-.gallery img {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* Testimonials */
-.testimonials {
+.fitness-tags li {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(201, 123, 99, 0.14);
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.hero-cta {
+  align-self: flex-start;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(201, 123, 99, 0.35);
+  background: linear-gradient(120deg, rgba(201, 123, 99, 0.92), rgba(219, 165, 141, 0.88));
+  color: var(--signature-white);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 18px 36px rgba(149, 118, 97, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 48px rgba(149, 118, 97, 0.28);
+}
+
+.fitness-hero__card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 20px;
+  border: 1px solid rgba(201, 123, 99, 0.16);
+  padding: 32px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fitness-hero__card h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.fitness-hero__card p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.fitness-chat {
+  margin-bottom: 48px;
+}
+
+.fitness-support {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.support-card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(201, 123, 99, 0.16);
+  border-radius: 24px;
+  padding: clamp(24px, 4vw, 32px);
+  box-shadow: 0 20px 36px rgba(149, 118, 97, 0.16);
+  display: flex;
+  flex-direction: column;
   gap: 16px;
 }
-.testimonial {
-  background: #f9fbff;
-  border: 1px solid #e3efff;
-  border-radius: 12px;
-  padding: 14px;
+
+.support-card h2 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2rem);
 }
-.testimonial img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 8px;
+
+.support-card p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.6;
 }
-.testimonial blockquote { margin: 0; font-size: 14px; color: #234; }
-.testimonial .author { margin-top: 8px; font-size: 12px; color: #567; font-weight: 600; }
+
+.support-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .fitness-page {
+    padding: 64px 16px 88px;
+  }
+
+  .fitness-hero {
+    padding: 32px 24px;
+  }
+
+  .fitness-hero__card {
+    padding: 24px;
+  }
+}

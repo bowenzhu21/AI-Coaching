@@ -5,7 +5,7 @@
   align-items: center;
   min-height: 80vh;
   width: 100%;
-  background: var(--bg-gradient);
+  background: var(--bg-primary);
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
 }
@@ -21,9 +21,9 @@
   background-size: 120%;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.18;
+  opacity: 0.45;
   z-index: 0;
-  filter: saturate(1.2) contrast(1.05);
+  filter: saturate(1) contrast(1);
 }
 
 .home-content {
