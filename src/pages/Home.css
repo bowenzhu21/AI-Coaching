@@ -21,7 +21,7 @@
   background-size: 120%;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.45;
+  opacity: 0.55;
   z-index: 0;
   filter: saturate(1) contrast(1);
 }
