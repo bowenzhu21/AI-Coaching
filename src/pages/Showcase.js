@@ -182,6 +182,12 @@ const Showcase = () => {
                   More details
                 </button>
               </div>
+              <img
+                src={`/images/${project.id}.png`}
+                alt={project.title}
+                className="project-image"
+                loading="lazy"
+              />
             </article>
           ))}
         </div>
