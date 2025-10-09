@@ -23,7 +23,7 @@ const Fitness = () => {
           <p>Need hands-on support? Book a free consultation and see if you would benefit from personal coaching.</p>
           <button
             className="hero-cta"
-            onClick={() => window.location.href = '/bowen/contact'}
+            onClick={() => window.location.href = '/contact'}
           >
             Personal Coaching
           </button>

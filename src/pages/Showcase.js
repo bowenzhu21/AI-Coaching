@@ -94,7 +94,7 @@ const Showcase = () => {
           <p>Want to chat and learn more about me, or get a free software consultation?</p>
           <button
             className="hero-cta"
-            onClick={() => window.location.href = '/bowen/contact'}
+            onClick={() => window.location.href = '/contact'}
           >
             Let's Chat
           </button>
@@ -134,7 +134,7 @@ const Showcase = () => {
             </div>
           </div>
           <video className="project-video" controls>
-            <source src="/bowen/images/Demo.mp4" type="video/mp4" />
+            <source src="/images/Demo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>

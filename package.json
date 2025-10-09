@@ -1,7 +1,6 @@
 {
   "name": "bowen",
   "version": "0.1.0",
-  "homepage": "https://bowenzhu21.github.io/bowen",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",

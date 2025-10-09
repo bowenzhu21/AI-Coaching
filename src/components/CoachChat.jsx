@@ -10,7 +10,6 @@ const CoachChat = ({ title, coachLabel, systemPrompt }) => {
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,35 +21,28 @@ const CoachChat = ({ title, coachLabel, systemPrompt }) => {
     setInput('');
     setIsLoading(true);
     try {
-      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      const response = await fetch('/api/ask', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${apiKey}`,
         },
         body: JSON.stringify({
-          model: 'gpt-4o-mini',
-          temperature: 0.7,
-          messages: [
-            { role: 'system', content: systemPrompt },
-            ...updatedMessages.map(({ role, content }) => ({ role, content })),
-          ],
+          systemPrompt,
+          messages: updatedMessages,
         }),
       });
-
       if (!response.ok) {
-        throw new Error(`OpenAI error: ${response.status}`);
+        throw new Error(`API error: ${response.status}`);
       }
-
       const data = await response.json();
-      const reply = data.choices?.[0]?.message?.content?.trim() || 'Sorry, I could not generate a response.';
+      const reply = data.reply || 'Sorry, I could not generate a response.';
       setMessages((prev) => [...prev, { role: 'assistant', content: reply }]);
     } catch (error) {
       setMessages((prev) => [
         ...prev,
         {
           role: 'assistant',
-          content: 'There was an issue reaching the AI service. Check your API key or network and try again.',
+          content: 'There was an issue reaching the AI service. Please try again later.',
         },
       ]);
       console.error(error);

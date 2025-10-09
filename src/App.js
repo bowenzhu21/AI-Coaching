@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <Router basename="/bowen">
+    <Router>
       <Navbar />
       <div style={{ padding: '20px' }}>
         <Routes>
