@@ -5,7 +5,7 @@ const CoachChat = ({ title, coachLabel, systemPrompt }) => {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      content: `Hi! I'm your ${coachLabel}. Ask me anything about training, scheduling, recovery, or nutrition and I'll tailor it to your situation.`,
+      content: `Hi! I'm Bowen, your personal AI Coach. Ask me anything.`,
     },
   ]);
   const [input, setInput] = useState('');
@@ -54,9 +54,9 @@ const CoachChat = ({ title, coachLabel, systemPrompt }) => {
   return (
     <div className="coach-chat">
       <header className="coach-chat__header">
+        <span className="coach-chat__status">AI-powered</span>
         <div>
           <h2>{title}</h2>
-          <p>Your AI partner for quick, actionable guidance. Share your context and get a tailored plan.</p>
         </div>
       </header>
 

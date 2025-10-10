@@ -22,10 +22,6 @@ const Contact = () => {
         <div className="contact-hero__content">
           <span className="contact-eyebrow">Bowen Zhu • Contact/Inquiry</span>
           <h1>Inquire about my Engineering/PM Skills</h1>
-          <p>
-            Want to learn more about my projects, experiences, or how I can contribute to your team. 
-            Shoot me an email and let's chat.
-          </p>
           <ul className="contact-highlights">
             {contactEngineeringHighlights.map((item) => (
               <li key={item}>{item}</li>
@@ -42,10 +38,6 @@ const Contact = () => {
         <div className="contact-hero__content">
           <span className="contact-eyebrow">Bowen Zhu • Coaching</span>
           <h1>Let&apos;s build the plan that fits your season.</h1>
-          <p>
-            Whether you&apos;re balancing a heavy course load, a travel-heavy job, or student-athlete
-            demands, together we can craft a sustainable training and nutrition flow that keeps momentum high.
-          </p>
           <ul className="contact-highlights">
             {contactHighlights.map((item) => (
               <li key={item}>{item}</li>

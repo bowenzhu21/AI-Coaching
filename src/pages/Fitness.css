@@ -1,3 +1,12 @@
+/* Match nutrition-hero__card ul styles for consistency */
+.fitness-hero__card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  color: var(--text-muted);
+}
 .fitness-page {
   max-width: 1080px;
   margin: 0 auto;
@@ -102,7 +111,7 @@
 }
 
 .hero-cta {
-  align-self: flex-start;
+align-self: flex-start;
   padding: 12px 22px;
   border-radius: 999px;
   border: 1px solid rgba(201, 123, 99, 0.35);

@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import './Engineering.css';
-import './Fitness.css';
+import './Showcase.css';
 
 const quickTopics = ['AI Systems', 'Full-Stack Product', 'Embedded Firmware', 'Design Leadership'];
 
@@ -12,7 +12,7 @@ const Showcase = () => {
         title: 'LearnLog',
         description:
           'Daily learning journal that pairs AI reflections with actionable summaries. Built with Next.js 15, Relay, and Prisma.',
-        background: 'linear-gradient(135deg, #f7e4d7 0%, #fdf3ea 100%)',
+        background: 'linear-gradient(135deg, #060921 0%, #1b1f5a 55%, #3b2a86 100%)',
         tags: ['TypeScript', 'PostgreSQL', 'LLMs', 'Next.js', 'Relay', 'Prisma'],
         live: 'https://learn-log.vercel.app/',
         code: 'https://github.com/bowenzhu21/LearnLog',
@@ -27,7 +27,7 @@ const Showcase = () => {
         title: 'GymBro',
         description:
           'Machine-learning powered workout matchmaking platform pairing accountability partners based on training styles.',
-        background: 'linear-gradient(135deg, #f5e6d6 0%, #f8ede0 100%)',
+        background: 'linear-gradient(135deg, #050107 0%, #1a0813 45%, #651020 100%)',
         tags: ['React Native', 'TypeScript', 'Node.js', 'Firebase', 'Firestore', 'Authentication', 'Storage', 'Expo'],
         live: 'https://bowenzhu21.github.io/gymbro/',
         code: 'https://github.com/bowenzhu21/gymbro',
@@ -42,8 +42,8 @@ const Showcase = () => {
         title: 'Steady',
         description:
           'Wearable actuator glove system that reduces tremors by 84% with real-time sensor fusion and ML-based detection.',
-        background: 'linear-gradient(135deg, #f0e1d8 0%, #f9f2eb 100%)',
-       tags: ['TensorFlow', 'Embedded C++', 'Arduino', 'ESP32', 'Accelerometer', 'Python'],
+        background: 'linear-gradient(135deg, #071944 0%, #1b4fb3 55%, #f3cc2d 100%)',
+        tags: ['TensorFlow', 'Embedded C++', 'Arduino', 'ESP32', 'Accelerometer', 'Python'],
         code: 'https://github.com/bowenzhu21/Steady.git',
         highlights: [
           'Streaming IMU data into a TensorFlow Lite model for 95% tremor classification accuracy.',
@@ -56,7 +56,7 @@ const Showcase = () => {
         title: 'SmartMixer',
         description:
           'AI DJ assistant that layers tracks with BPM-aware transitions using Librosa signal analysis and STFT.',
-        background: 'linear-gradient(135deg, #f2ddd5 0%, #f6eee6 100%)',
+        background: 'linear-gradient(135deg, #060304 0%, #2a040a 45%, #9b101f 100%)',
         tags: ['Python', 'Librosa', 'NumPy', 'Pandas', 'SciPy', 'Matplotlib', 'Machine Learning', 'Flask'],
         code: 'https://github.com/bowenzhu21/Smart-Mixer.git',
         highlights: [
@@ -78,22 +78,22 @@ const Showcase = () => {
         background: 'linear-gradient(140deg, rgba(253,248,243,0.92), rgba(246,236,228,0.9))',
       }}
     >
-      <section className="fitness-hero">
-        <div className="fitness-hero__content">
+      <section className="showcase-hero">
+        <div className="showcase-hero__content">
           <span className="eyebrow">Bowen Zhu • Projects</span>
           <h1>Showcase</h1>
           <p>Hi, I'm Bowen. Check out my projects below.</p>
-          <ul className="fitness-tags">
+          <ul className="showcase-hero__tags">
             {quickTopics.map((topic) => (
               <li key={topic}>{topic}</li>
             ))}
           </ul>
         </div>
-        <div className="fitness-hero__card">
+        <div className="showcase-hero__card">
           <h2>Get in Touch</h2>
           <p>Want to chat and learn more about me, or get a free software consultation?</p>
           <button
-            className="hero-cta"
+            className="showcase-hero__cta"
             onClick={() => window.location.href = '/contact'}
           >
             Let's Chat
@@ -147,7 +147,7 @@ const Showcase = () => {
           {projects.map((project, index) => (
             <article
               key={project.id}
-              className="project-card project-card--image"
+              className={`project-card project-card--image project-card--${project.id}`}
               style={{
                 background: project.background,
                 '--card-delay': `${0.3 + index * 0.12}s`,

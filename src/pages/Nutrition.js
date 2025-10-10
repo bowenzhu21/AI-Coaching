@@ -11,7 +11,6 @@ const Nutrition = () => {
         <div className="nutrition-hero__content">
           <span className="eyebrow">Bowen Zhu • Nutrition Coaching</span>
           <h1>Health that fits your life.</h1>
-          <p>Chat with Bowen's AI Fitness Coach for meal plans, healthy substitues, and more, all tailored to you.</p>
           <ul className="nutrition-tags">
             {nutritionHighlights.map((item) => (
               <li key={item}>{item}</li>
@@ -20,7 +19,7 @@ const Nutrition = () => {
         </div>
         <div className="nutrition-hero__card">
           <h2>Personal Nutrition Coaching</h2>
-          <p>Need hands-on support? Book a free consultation and see if you would benefit from personal coaching.</p>
+          <p>Book a free consultation and see if you would benefit from personal coaching.</p>
           <button
             className="hero-cta"
             onClick={() => window.location.href = '/contact'}
