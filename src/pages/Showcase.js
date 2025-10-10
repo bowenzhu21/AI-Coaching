@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import './Engineering.css';
 import './Showcase.css';
 
-const quickTopics = ['AI Systems', 'Full-Stack Product', 'Embedded Firmware', 'Design Leadership'];
+const quickTopics = ['AI/ML Systems', 'Software Infrastructure', 'Product Management', 'Full-Stack Dev'];
 
 const Showcase = () => {
   const projects = useMemo(
@@ -11,30 +11,29 @@ const Showcase = () => {
         id: 'learnlog',
         title: 'LearnLog',
         description:
-          'Daily learning journal that pairs AI reflections with actionable summaries. Built with Next.js 15, Relay, and Prisma.',
+          'Daily learning journal with AI Habits Coach and Summaries. Built to empower specialized student learning.',
         background: 'linear-gradient(135deg, #060921 0%, #1b1f5a 55%, #3b2a86 100%)',
         tags: ['TypeScript', 'PostgreSQL', 'LLMs', 'Next.js', 'Relay', 'Prisma'],
         live: 'https://learn-log.vercel.app/',
         code: 'https://github.com/bowenzhu21/LearnLog',
         highlights: [
-          'Vector search-backed insights summarizing daily logs via OpenAI GPT-4.1.',
-          'Realtime editing surface with optimistic Relay mutations and persisted drafts.',
-          'Role-based spaces with granular access for mentors, peers, and cohorts.',
+          'Built full-stack journaling platform in Next.js, GraphQL & PostgreSQL with TypeScript, supporting scalable data',
+          'Built LLM pipelines with GPT-4o-mini for customized summaries and habit coaching with fallback handling',
         ],
       },
       {
         id: 'gymbro',
         title: 'GymBro',
         description:
-          'Machine-learning powered workout matchmaking platform pairing accountability partners based on training styles.',
+          'ML powered fitness social platform pairing partners based on training styles and body compositions.',
         background: 'linear-gradient(135deg, #050107 0%, #1a0813 45%, #651020 100%)',
-        tags: ['React Native', 'TypeScript', 'Node.js', 'Firebase', 'Firestore', 'Authentication', 'Storage', 'Expo'],
+        tags: ['React Native', 'TypeScript', 'Node.js', 'Firebase', 'Firestore'],
         live: 'https://bowenzhu21.github.io/gymbro/',
         code: 'https://github.com/bowenzhu21/gymbro',
         highlights: [
-          'K-means clustering over 100+ feature combos to pair athletes across 10 disciplines.',
-          'CI/CD pipeline using GitHub Actions to auto lint, test, and deploy static builds.',
-          'Gamified retention loops with streak tracking and push notification cadence.',
+          'Shipped a cross-platform mobile app in using React Native, Firebase Auth, Firestore, and Storage',
+          'Implemented secure user interface with real-time Firestore queries, and custom Firestore security rules.',
+          'Improved match relevance by 35% by deploying custom compatibility metrics (strength ratios, VO2 max estimates).',
         ],
       },
       {
@@ -43,12 +42,11 @@ const Showcase = () => {
         description:
           'Wearable actuator glove system that reduces tremors by 84% with real-time sensor fusion and ML-based detection.',
         background: 'linear-gradient(135deg, #071944 0%, #1b4fb3 55%, #f3cc2d 100%)',
-        tags: ['TensorFlow', 'Embedded C++', 'Arduino', 'ESP32', 'Accelerometer', 'Python'],
+        tags: ['Python', 'TensorFlow', 'Embedded C++', 'Arduino', 'ESP32', 'Accelerometer'],
         code: 'https://github.com/bowenzhu21/Steady.git',
         highlights: [
-          'Streaming IMU data into a TensorFlow Lite model for 95% tremor classification accuracy.',
-          'Closed-loop haptic actuator control tuned with PID and FFT-based smoothing.',
-          '3D-printed exoskeleton optimized in SolidWorks for sensor placement and ergonomics.',
+          'Developed accelerometer-based gloves on ESP32 using C++ & BLE to streaming motion data for tremor analysis',
+          'Built TensorFlow pipeline in Python for tremor detection & motion prediction, enabling adaptive stabilization',  
         ],
       },
       {
@@ -57,7 +55,7 @@ const Showcase = () => {
         description:
           'AI DJ assistant that layers tracks with BPM-aware transitions using Librosa signal analysis and STFT.',
         background: 'linear-gradient(135deg, #060304 0%, #2a040a 45%, #9b101f 100%)',
-        tags: ['Python', 'Librosa', 'NumPy', 'Pandas', 'SciPy', 'Matplotlib', 'Machine Learning', 'Flask'],
+        tags: ['Python', 'Librosa', 'Pandas/NumPy/SciPy', 'Matplotlib', 'Machine Learning', 'Flask'],
         code: 'https://github.com/bowenzhu21/Smart-Mixer.git',
         highlights: [
           'Automated BPM drift correction and beat alignment across 30 BPM ranges.',
@@ -102,34 +100,22 @@ const Showcase = () => {
       </section>
 
       <section className="section">
-        <h2 className="section-title">Hippos Exoskeleton Project</h2>
+        <h2 className="section-title">Hippos Exoskeleton</h2>
         <div className="project-card project-card--video">
           <div className="video-panel">
-            <h3>Hippos Firmware + Full Stack App using BLE Integration Demo</h3>
-            <p>
-              BLE-enabled performance knee brace with synchronized firmware, mobile dashboards, and sub-100ms cloud data
-              loop. Built as the end-to-end control center for high-performance athletes.
-            </p>
+            <h3>Firmware + Full Stack App using BLE Demo</h3>
             <div className="tag-row">
               <span className="tag">TypeScript</span>
               <span className="tag">Python</span>
               <span className="tag">PostgreSQL</span>
               <span className="tag">JavaScript</span>
               <span className="tag">React Native</span>
-              <span className="tag">System Architecture</span>
-              <span className="tag">Product Management</span>
-              <span className="tag">Pandas</span>
-              <span className="tag">SciPy</span>
-              <span className="tag">NumPy</span>
-              <span className="tag">UI/UX</span>
-              <span className="tag">Expo</span>
+              <span className="tag">Pandas/SciPy/NumPy</span>
               <span className="tag">Docker</span>
-              <span className="tag">AWS</span>
-              <span className="tag">EC2</span>
-              <span className="tag">C++</span>
+              <span className="tag">AWS (EC2)</span>
+              <span className="tag">Embedded C++</span>
               <span className="tag">ESP32</span>
               <span className="tag">BLE</span>
-              <span className="tag">Arduino IDE</span>
               <span className="tag">IMU</span>
             </div>
           </div>

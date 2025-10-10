@@ -2,7 +2,7 @@ import React from 'react';
 import CoachChat from '../components/CoachChat';
 import './Fitness.css';
 
-const quickTopics = ['Hybrid Splits', 'Minimal Equipment', 'Recovery Priming', 'Optimizing Training'];
+const quickTopics = ['Hybrid Splits', 'Optimized Training'];
 
 const Fitness = () => {
   return (
@@ -19,7 +19,7 @@ const Fitness = () => {
         </div>
         <div className="fitness-hero__card">
           <h2>Personal Fitness Coaching</h2>
-          <p>Book a free consultation and see if you would benefit from personal coaching.</p>
+          <p>Book a free consultation today.</p>
           <button
             className="hero-cta"
             onClick={() => window.location.href = '/contact'}

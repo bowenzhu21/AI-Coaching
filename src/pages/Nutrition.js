@@ -2,7 +2,7 @@ import React from 'react';
 import CoachChat from '../components/CoachChat';
 import './Nutrition.css';
 
-const nutritionHighlights = ['Quick Meals', 'Healthy Substitutes', 'Nutrition Optimization', 'Budget-Friendly'];
+const nutritionHighlights = ['Healthy Substitutes', 'Nutrition Optimization'];
 
 const Nutrition = () => {
   return (
@@ -19,7 +19,7 @@ const Nutrition = () => {
         </div>
         <div className="nutrition-hero__card">
           <h2>Personal Nutrition Coaching</h2>
-          <p>Book a free consultation and see if you would benefit from personal coaching.</p>
+          <p>Book a free consultation today.</p>
           <button
             className="hero-cta"
             onClick={() => window.location.href = '/contact'}
