@@ -102,7 +102,7 @@ const Showcase = () => {
       </section>
 
       <section className="section">
-        <h2 className="section-title">Hippos Firmware + Full Stack App using BLE Integration Demo</h2>
+        <h2 className="section-title">Hippos Exoskeleton Project</h2>
         <div className="project-card project-card--video">
           <div className="video-panel">
             <h3>Hippos Firmware + Full Stack App using BLE Integration Demo</h3>

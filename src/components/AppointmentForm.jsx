@@ -22,7 +22,7 @@ const AppointmentForm = () => {
   };
 
   return (
-    <div className="appointment-container">
+    <div className="appointment-container" id="appointment-form">
       <div className="appointment-card">
         <h2>Book an Appointment</h2>
         <form className="appointment-form" onSubmit={handleSubmit}>
