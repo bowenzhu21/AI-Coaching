@@ -4,11 +4,18 @@
   max-width: 320px;
   aspect-ratio: 4/3;
   object-fit: cover;
+  object-position: center;
   border-radius: 16px;
   margin: 32px auto 16px auto;
   display: block;
   box-shadow: 0 8px 24px rgba(149, 118, 97, 0.10);
   background: #f7f3ef;
+}
+
+@media (max-width: 768px) {
+  .project-image {
+    object-position: right center;
+  }
 }
 /* Layout container */
 .engineering-container {

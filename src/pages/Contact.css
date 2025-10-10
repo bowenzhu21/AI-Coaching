@@ -59,8 +59,8 @@
     radial-gradient(circle at 82% 18%, rgba(241, 212, 189, 0.5), transparent 62%);
   opacity: 0.9;
   background-image: url('./fitness2.jpg');
-  background-size: 100%;
-  background-position: top;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   opacity: 0.25;
   z-index: 0;
@@ -75,8 +75,8 @@
     radial-gradient(circle at 82% 18%, rgba(241, 212, 189, 0.5), transparent 62%);
   opacity: 0.9;
   background-image: url('./me.png');
-  background-size: 80%;
-  background-position: top;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   opacity: 0.25;
   z-index: 0;
@@ -355,5 +355,10 @@
 
   .contact-hero__chip {
     right: 20px;
+  }
+
+  .contact-hero::after,
+  .contact-hero2::after {
+    background-position: right center;
   }
 }

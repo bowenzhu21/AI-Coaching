@@ -16,8 +16,8 @@
   box-shadow: 0 32px 60px rgba(149, 118, 97, 0.16);
   z-index: 0;
   background-image: url('./nutrition.png');
-  background-size: 100%;
-  background-position: top;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   opacity: 1;
   z-index: 0;
@@ -196,5 +196,9 @@
 
   .nutrition-hero__card {
     padding: 24px;
+  }
+
+  .nutrition-page::before {
+    background-position: right center;
   }
 }
