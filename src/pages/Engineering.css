@@ -172,9 +172,6 @@
   padding: 32px;
   align-items: center;
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(237, 241, 255, 0.95));
-  opacity: 0;
-  animation: floatIn 0.9s ease forwards;
-  animation-delay: 0.15s;
 }
 
 .video-panel {
@@ -237,9 +234,6 @@
   flex-direction: column;
   gap: 16px;
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-  opacity: 0;
-  animation: floatIn 0.9s ease forwards;
-  animation-delay: var(--card-delay, 0.35s);
 }
 
 .project-card::before {

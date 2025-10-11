@@ -1,10 +1,13 @@
 import React, { useMemo, useState } from 'react';
+import useRevealOnScroll from '../hooks/useRevealOnScroll';
 import './Engineering.css';
 import './Showcase.css';
 
 const quickTopics = ['AI/ML Systems', 'Software Infrastructure', 'Product Management', 'Full-Stack Dev'];
 
 const Showcase = () => {
+  useRevealOnScroll('.engineering-container .reveal-on-scroll');
+
   const projects = useMemo(
     () => [
       {
@@ -76,18 +79,23 @@ const Showcase = () => {
         background: 'linear-gradient(140deg, rgba(253,248,243,0.92), rgba(246,236,228,0.9))',
       }}
     >
-      <section className="showcase-hero">
-        <div className="showcase-hero__content">
+      <section className="showcase-hero reveal-on-scroll">
+        <div className="showcase-hero__content reveal-on-scroll reveal-from-left reveal-delay-1">
           <span className="eyebrow">Bowen Zhu • Projects</span>
           <h1>Showcase</h1>
           <p>Hi, I'm Bowen. Check out my projects below.</p>
           <ul className="showcase-hero__tags">
-            {quickTopics.map((topic) => (
-              <li key={topic}>{topic}</li>
+            {quickTopics.map((topic, index) => (
+              <li
+                key={topic}
+                className={`reveal-on-scroll reveal-delay-${index + 2}`}
+              >
+                {topic}
+              </li>
             ))}
           </ul>
         </div>
-        <div className="showcase-hero__card">
+        <div className="showcase-hero__card reveal-on-scroll reveal-from-right reveal-scale reveal-delay-2">
           <h2>Get in Touch</h2>
           <p>Want to chat and learn more about me, or get a free software consultation?</p>
           <button
@@ -127,16 +135,15 @@ const Showcase = () => {
       </section>
 */}
       {/* Projects Section */}
-      <section className="section">
-        <h2 className="section-title">Projects</h2>
-        <div className="project-grid">
+      <section className="section reveal-on-scroll reveal-scale reveal-delay-1">
+        <h2 className="section-title reveal-on-scroll reveal-delay-1">Projects</h2>
+        <div className="project-grid reveal-on-scroll reveal-delay-2">
           {projects.map((project, index) => (
             <article
               key={project.id}
-              className={`project-card project-card--image project-card--${project.id}`}
+              className={`project-card project-card--image project-card--${project.id} reveal-on-scroll reveal-scale reveal-delay-${Math.min(index + 2, 6)}`}
               style={{
                 background: project.background,
-                '--card-delay': `${0.3 + index * 0.12}s`,
               }}
             >
               <h3 className="project-title">{project.title}</h3>
