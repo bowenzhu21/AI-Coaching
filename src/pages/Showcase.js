@@ -98,7 +98,7 @@ const Showcase = () => {
           </button>
         </div>
       </section>
-
+{/*
       <section className="section">
         <h2 className="section-title">Hippos Exoskeleton</h2>
         <div className="project-card project-card--video">
@@ -125,7 +125,7 @@ const Showcase = () => {
           </video>
         </div>
       </section>
-
+*/}
       {/* Projects Section */}
       <section className="section">
         <h2 className="section-title">Projects</h2>

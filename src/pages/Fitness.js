@@ -1,23 +1,31 @@
 import React from 'react';
 import CoachChat from '../components/CoachChat';
+import useRevealOnScroll from '../hooks/useRevealOnScroll';
 import './Fitness.css';
 
 const quickTopics = ['Hybrid Splits', 'Optimized Training'];
 
 const Fitness = () => {
+  useRevealOnScroll('.fitness-page .reveal-on-scroll');
+
   return (
     <div className="fitness-page">
-      <section className="fitness-hero">
-        <div className="fitness-hero__content">
+      <section className="fitness-hero reveal-on-scroll">
+        <div className="fitness-hero__content reveal-on-scroll reveal-from-left reveal-delay-1">
           <span className="eyebrow">Bowen Zhu • Fitness Coaching</span>
           <h1>Strength that fits your life.</h1>
           <ul className="fitness-tags">
-            {quickTopics.map((topic) => (
-              <li key={topic}>{topic}</li>
+            {quickTopics.map((topic, index) => (
+              <li
+                key={topic}
+                className={`reveal-on-scroll reveal-delay-${index + 2}`}
+              >
+                {topic}
+              </li>
             ))}
           </ul>
         </div>
-        <div className="fitness-hero__card">
+        <div className="fitness-hero__card reveal-on-scroll reveal-from-right reveal-scale reveal-delay-2">
           <h2>Personal Fitness Coaching</h2>
           <p>Book a free consultation today.</p>
           <button
@@ -29,7 +37,7 @@ const Fitness = () => {
         </div>
       </section>
 
-      <section className="fitness-chat">
+      <section className="fitness-chat reveal-on-scroll reveal-scale reveal-delay-3">
         <CoachChat
           title="Bowen AI - Fitness Coach"
           coachLabel="AI fitness coach"
