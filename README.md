@@ -1,2 +1,2 @@
-# Portfolio (bowenzhu21.github.io/bowen)
+# Portfolio
 https://bowenzhu.vercel.app/
