@@ -32,7 +32,7 @@ const Showcase = () => {
         background: 'linear-gradient(135deg, #050107 0%, #1a0813 45%, #651020 100%)',
         tags: ['React Native', 'TypeScript', 'Node.js', 'Firebase', 'Firestore'],
         live: 'https://bowenzhu21.github.io/gymbro/',
-        code: 'https://github.com/bowenzhu21/gymbro',
+        code: 'https://github.com/bowenzhu21/GymBro-Mobile',
         highlights: [
           'Shipped a cross-platform mobile app in using React Native, Firebase Auth, Firestore, and Storage',
           'Implemented secure user interface with real-time Firestore queries, and custom Firestore security rules.',
