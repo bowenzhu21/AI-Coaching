@@ -4,7 +4,12 @@ import { useEffect } from 'react';
  * Adds an `is-visible` class to any element matching the selector
  * once it scrolls into view. Intended for lightweight reveal animations.
  */
-const useRevealOnScroll = (selector) => {
+const useRevealOnScroll = (selector, options = {}) => {
+  const {
+    rootMargin = '0px 0px -12% 0px',
+    threshold = 0.15,
+  } = options;
+
   useEffect(() => {
     if (typeof window === 'undefined' || !selector) {
       return;
@@ -26,8 +31,8 @@ const useRevealOnScroll = (selector) => {
         });
       },
       {
-        rootMargin: '0px 0px -12% 0px',
-        threshold: 0.15,
+        rootMargin,
+        threshold,
       }
     );
 
@@ -40,7 +45,7 @@ const useRevealOnScroll = (selector) => {
     return () => {
       observer.disconnect();
     };
-  }, [selector]);
+  }, [selector, rootMargin, threshold]);
 };
 
 export default useRevealOnScroll;

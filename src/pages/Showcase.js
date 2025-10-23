@@ -6,10 +6,43 @@ import './Showcase.css';
 const quickTopics = ['AI/ML Systems', 'Software Infrastructure', 'Product Management', 'Full-Stack Dev'];
 
 const Showcase = () => {
-  useRevealOnScroll('.engineering-container .reveal-on-scroll');
+  const revealOptions = useMemo(
+    () => ({
+      rootMargin: '0px 0px 12% 0px',
+      threshold: 0.05,
+    }),
+    []
+  );
+
+  useRevealOnScroll('.engineering-container .reveal-on-scroll', revealOptions);
 
   const projects = useMemo(
     () => [
+      {
+  id: 'adapt',
+  title: 'Adapt',
+  description:
+    'An adaptive AI web app that changes layout, components, and theme based on the conversation. Memory via pgvector, LangChain orchestration, and realtime UI.',
+  background: 'linear-gradient(140deg, rgba(255,255,255,0.98) 0%, rgba(244,241,255,0.96) 55%, rgba(235,228,255,0.94) 100%)',
+  tags: [
+    'LLMs',
+    'pgvector',
+    'LangChain',
+    'OpenAI',
+    'Next.js',
+    'TypeScript',
+    'PostgreSQL',
+  ],
+  live: 'https://adaptive-ai.vercel.app/',
+  code: 'https://github.com/bowenzhu21/Adapt',
+  highlights: [
+    'Adaptive UI engine that picks components (timer, breathing, planner, journal, etc.) and theme per message.',
+    'Long-term RAG memory using Supabase pgvector; retrieves relevant past goals/notes for personalization.',
+    'LangChain orchestration: intent detection → memory retrieval → UI plan generation → sanitization → persist.',
+    'Realtime UI via Supabase: ui_state upserts broadcast to clients—no manual reload needed.',
+    'Secure auth with Supabase; deployed on Vercel; theme driven by CSS variables (bg/fg/primary/accent).'
+  ],
+},
       {
         id: 'learnlog',
         title: 'LearnLog',
@@ -44,7 +77,7 @@ const Showcase = () => {
         title: 'Steady',
         description:
           'Wearable actuator glove system that reduces tremors by 84% with real-time sensor fusion and ML-based detection.',
-        background: 'linear-gradient(135deg, #071944 0%, #1b4fb3 55%, #f3cc2d 100%)',
+        background: 'linear-gradient(135deg, #2b488bff 0%, #849fd1ff 55%, #ffffffff 100%)',
         tags: ['Python', 'TensorFlow', 'Embedded C++', 'Arduino', 'ESP32', 'Accelerometer'],
         code: 'https://github.com/bowenzhu21/Steady.git',
         highlights: [
