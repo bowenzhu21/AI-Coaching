@@ -28,7 +28,7 @@ const Showcase = () => {
     'LLMs',
     'pgvector',
     'LangChain',
-    'OpenAI',
+    'Groq',
     'Next.js',
     'TypeScript',
     'PostgreSQL',
