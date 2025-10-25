@@ -33,7 +33,7 @@ const Showcase = () => {
     'TypeScript',
     'PostgreSQL',
   ],
-  live: 'https://adaptive-ai.vercel.app/',
+  live: 'https://adapt-ui.vercel.app/',
   code: 'https://github.com/bowenzhu21/Adapt',
   highlights: [
     'Adaptive UI engine that picks components (timer, breathing, planner, journal, etc.) and theme per message.',
